@@ -1,12 +1,8 @@
 /********************************************************************************
- *      Copyright:  (C) 2020 LuXiaoyang<920916829@qq.com>
- *                  All rights reserved.
- *
  *       Filename:  tlv.h
  *    Description:  This head file 
  *
  *        Version:  1.0.0(30/07/20)
- *         Author:  LuXiaoyang <920916829@qq.com>
  *      ChangeLog:  1, Release initial version on "30/07/20 07:15:43"
  *                 
  ********************************************************************************/

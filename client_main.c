@@ -1,13 +1,9 @@
 /*********************************************************************************
- *      Copyright:  (C) 2020 Xiao yang IoT System Studio
- *                  All rights reserved.
- *
  *       Filename:  f.c
  *    Description:  The temperature real-time reporting 
  *                 
  *        Version:  1.0.0(03/29/2020)
- *         Author:  Lu Xiaoyang <920916829@qq.com>
- *      ChangeLog:  1, Release initial version on "03/29/2020 03:10:02 PM"
+ *      ChangeLog:  1, Release initial version on "7/29/2020 03:10:02 PM"
  *                 
  ********************************************************************************/
 #include <getopt.h>
@@ -24,7 +20,7 @@
 
 #define ACK              1
 #define NAK              2
-#define send_type1       1 //表示是直接发送的数据还是从数据库中拿出来发送的数据，若从数据库中拿的数据发送三次失败后，将删除这条记录；
+#define send_type1       1 
 #define send_type2       2
 
 
@@ -254,16 +250,6 @@ SAVE_TLV:
 }
 
 
-/*******************************************************************************
- * 函数名：Send_TlvPacket_To_Server()
- * 功能：将已打包好的tlv字节流数组发送到服务器端，并等待服务器回发报文判断是否重传
- * 参数： sockfd - 用于通信的socket套接字;
- *        tlv - tlv_buf_t 类型的结构体指针;
- *        retry_times - 重传次数;
- *        send_type - 发送数据的是直接发送的还是从数据库中取出发送的;
- *        db - 要操作的数据库的句柄
- * 返回值：成功返回实际发送的字节数，失败返回-1
- ******************************************************************************/
 int Send_TlvPacket_To_Server(int sockfd,tlv_buf_t *tlv,int retry_times,int send_type,sqlite3 *db)
 {
 
@@ -334,12 +320,6 @@ int Send_TlvPacket_To_Server(int sockfd,tlv_buf_t *tlv,int retry_times,int send_
 
 
 
-/*******************************************************************************
- * 函数名：print_helpmsg()
- * 功能：打印程序的帮助信息
- * 参数：progname - 程序名
- * 返回值：无
- ******************************************************************************/
 static inline void print_helpmsg(char *progname)
 {
     printf("*************************** %s helpmsg ****************************************\n\n",progname);

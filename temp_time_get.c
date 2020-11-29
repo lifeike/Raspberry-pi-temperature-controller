@@ -1,12 +1,8 @@
 /*********************************************************************************
- *      Copyright:  (C) 2020 Xiao yang IoT System Studio
- *                  All rights reserved.
- *
  *       Filename:  temprature_get.c
  *    Description:  This file is get temperature from RPi
  *                 
  *        Version:  1.0.0(03/30/2020)
- *         Author:  Lu Xiaoyang <920916829@qq.com>
  *      ChangeLog:  1, Release initial version on "03/30/2020 10:15:30 AM"
  *                 
  ********************************************************************************/
