@@ -1,12 +1,8 @@
 /*********************************************************************************
- *      Copyright:  (C) 2020 Xiao yang IoT System Studio
- *                  All rights reserved.
- *
  *       Filename:  socket_server_thread.c
  *    Description:  This file 
  *                 
  *        Version:  1.0.0(04/17/2020)
- *         Author:  Lu Xiaoyang <920916829@qq.com>
  *      ChangeLog:  1, Release initial version on "04/17/2020 10:10:57 PM"
  *                 
  ********************************************************************************/

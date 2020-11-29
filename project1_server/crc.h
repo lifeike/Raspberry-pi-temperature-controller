@@ -1,12 +1,8 @@
 /********************************************************************************
- *      Copyright:  (C) 2020 Xiao yang IoT System Studio
- *                  All rights reserved.
- *
  *       Filename:  crc.h
  *    Description:  This head file 
  *
  *        Version:  1.0.0(04/02/2020)
- *         Author:  Lu Xiaoyang <920916829@qq.com>
  *      ChangeLog:  1, Release initial version on "04/02/2020 04:53:41 PM"
  *                 
  ********************************************************************************/

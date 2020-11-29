@@ -1,26 +1,28 @@
-# 基于树莓派的温度监控项目
+# RaspberryPi-based termperature controller
 
-#### 项目流程图（客户端）
+#### project work flow（client）
 ![输入图片说明](https://images.gitee.com/uploads/images/2020/0812/170844_ae00dab3_5695210.png "新新.png")
 
-#### 逻辑介绍
-客户端固定时间向树莓派上的动ds18b20温度传感器获取温度，获取实时时间，经TLV格式打包后发送至服务器端，支持断线重连（客户端发送数据失败后会将数据存入数据库，当连接上服务器后，在每次发送实时获取的数据以外，会从数据库中获取最多五条数据进行发送），确认重传机制。数据库使用轻量级sqlite3数据库，程序运行包含日志系统，实时更新程序运行的错误信息
+#### business logic
 
-#### TLV格式
+The client obtains the temperature from the dynamic ds18b20 temperature sensor on the Raspberry Pi at a fixed time, and obtains the real-time time, which is packaged in TLV format and sent to the server. It supports disconnection and reconnection (the data will be stored in the database after the client fails to send data. After connecting to the server, in addition to sending real-time data every time, up to five pieces of data will be obtained from the database for sending), confirm the retransmission mechanism. The database uses a lightweight sqlite3 database, the program operation includes a log system, and the error information of the program operation is updated in real time
+
+#### TLV format
 TLV buf:
 ![TLV](https://images.gitee.com/uploads/images/2020/0812/171543_e037d035_5695210.png "屏幕截图.png")
 
 
-###### 本人主要负责客户端程序编写，调试时使用TCP_Test_Tool工具完成
+###### testing tool-TCP Test Tool
 
-# 测试
-### 不运行服务器，只运行客户端，此时，服务器不在线
+# test
+### run client only while server disconnected
 ![输入图片说明](https://images.gitee.com/uploads/images/2020/0813/094511_d71a8009_5695210.png "1.png")
 
-### 运行服务器端
+### server running
 ![输入图片说明](https://images.gitee.com/uploads/images/2020/0813/095048_04b12932_5695210.png "VMSPQZX%FHYT]}6$E31]PNA.png")
-可以看到，这里运行后每次会接受6条数据，数次后就会每次只接收一次，因为服客户端先运行，而服务器断线，获取到的数据都保存到了数据库，服务器连上之后，客户端每次发送实时温度后，还要从数据库提取数据发送
+Server running here, it will receive 6 pieces of data each time, and after several times, it will only receive once each time, because the server client runs first, and the server is disconnected, the data obtained is saved to the database, and the server is connected After that, every time the client sends the real-time temperature, it will also extract data from the database and send it
+
 ![输入图片说明](https://images.gitee.com/uploads/images/2020/0813/095340_18dc07c6_5695210.png "{3H5O7J{_$9}5WTP{@14TDN.png")
 
-### 看看数据
+### statics
 ![输入图片说明](https://images.gitee.com/uploads/images/2020/0813/095450_02b9bc64_5695210.png "_Z58M@RWU]`)7Z]Q8UHO2NB.png")

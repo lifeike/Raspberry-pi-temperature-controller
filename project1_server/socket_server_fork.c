@@ -1,12 +1,8 @@
 /*********************************************************************************
- *      Copyright:  (C) 2020 Xiao yang IoT System Studio
- *                  All rights reserved.
- *
  *       Filename:  socket_server_fork.c
  *    Description:  This file server by fork
  *                 
  *        Version:  1.0.0(03/08/2020)
- *         Author:  Lu Xiaoyang <920916829@qq.com>
  *      ChangeLog:  1, Release initial version on "03/08/2020 05:02:49 PM"
  *                 
  ********************************************************************************/
